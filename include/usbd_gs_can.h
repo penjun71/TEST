@@ -69,7 +69,7 @@ extern USBD_ClassTypeDef USBD_GS_CAN;
 // RX FIFO is defined in words, so divide bytes by 4
 // RX FIFO size chosen according to reference manual RM0368 which suggests
 // using (largest packet size / 4) + 1
-# define USB_RX_FIFO_SIZE ((256U / 4U) + 1U)
+# define USB_RX_FIFO_SIZE ((64U / 4U) + 1U)
 #endif
 
 uint8_t USBD_GS_CAN_Init(USBD_HandleTypeDef *pdev, queue_t *q_frame_pool, queue_t *q_from_host, led_data_t *leds);
